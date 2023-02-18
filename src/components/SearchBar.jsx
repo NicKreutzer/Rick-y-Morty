@@ -2,7 +2,7 @@ export default function SearchBar(props) {
    return (
       <div>
          <input type='search' />
-         <button onClick={() => props.onSearch("You do not have the permits to add.")}>Search</button>
+         <button onClick={() => props.onSearch("Character not found.")}>Search</button>
       </div>
    );
 }
