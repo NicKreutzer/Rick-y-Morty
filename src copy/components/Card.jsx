@@ -12,10 +12,10 @@ export default function Card({name, species, gender, image, onClose}) {
          <div>
             <fieldset style={width1}> 
             <button onClick={onClose}>X</button>
-            <h1><strong>Name: {name}</strong></h1>
+            <h1><strong>{name}</strong></h1>
+            <img  src={image} alt={name} />
             <h2>Species: {species}</h2>
             <h3>Gender: {gender}</h3>
-            <img  src={image} alt={name} />
             </fieldset> 
          </div>
       

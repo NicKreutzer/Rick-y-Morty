@@ -30,9 +30,9 @@ function App () {
       </div>
       <hr />
       <div>
-        <SearchBar
+        {/* <SearchBar
           onSearch={(characterID) => window.alert(characterID)}
-        />
+        /> */}
       </div>
     </div>
   )
