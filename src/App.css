@@ -1,3 +1,47 @@
 .App {
    text-align: center;
+   border: solid 3px;
+   background-image: url(C:/Users/Nico/Desktop/RyM.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   align-items: center;
+   justify-content: center;
+   display: flex;  /*Centra las cards pero mueve la serch bar a cualquier lado*/
+  /* border : solid 2px rgb(0, 99, 8); */
+}
+img{
+   border: solid 5px rgb(2, 248, 23);
+   border-radius: 200px;
+}
+.card{
+   width: 250px;
+   height: 600px;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0px 0px 3px 1px #000000;
+   background-color: transparent;
+   border-style: solid 200px black;
+   border-radius: 10px;
+   flex-direction: row-reverse;
+}
+.card .content{
+   border-radius: 5px;
+   background-color: transparent;
+   width: 230px;
+   height: 550px;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+.btn{
+   cursor: pointer;
+   background-color: transparent;
+   border-radius: 50px;
+   border-color: transparent;
+   position: absolute; right: 35%; bottom: 82%;
 }
