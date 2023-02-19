@@ -22,13 +22,13 @@ function App () {
           onClose={() => window.alert('Emulamos que se cierra la card')}
         />
       </div>
-      <hr />
+      {/* <hr /> */}
       <div>
         <Cards
           characters={characters}
         />
       </div>
-      <hr />
+      {/* <hr /> */}
       <div>
         {/* <SearchBar
           onSearch={(characterID) => window.alert(characterID)}

@@ -2,8 +2,8 @@ import React from 'react';
 
 const width1 = {    //! Se ajusta el fieldset a las imagenes, pero las corre a la derecha.
    width: 200,
-   background: "green"   //! Le pone color al fieldset.
-   
+   background: "green",   //! Le pone color al fieldset.
+   style: "text-align: center;"
 };
 
 export default function Card({name, species, gender, image, origin, location, type, onClose}) {

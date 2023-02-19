@@ -183,6 +183,7 @@ export const Rick = {
   id: 1,
   name: "Rick Sanchez",
   species: "Human",
+  type: "",
   gender: "Male",
   origin: "Earth (C-137)",
   location: "Citadel of Ricks",
