@@ -7,26 +7,23 @@ import React from 'react';
 //    style: "text-align: center;"
 // };
 
+// import Card from './Card.module.css'
 
 export default function Card({name, species, gender, image, origin, location, type, onClose}) {
    return (
          <div id="card" class= "card">
-            <div class="content">
-               <span>
-            {/* <fieldset style={width1}>  */}
+            <span>
             <button class="btn" onClick={onClose}><strong>X</strong></button>
             <h1><strong>{name}</strong></h1>
             <img  src={image} alt={name}/>
-            <h2>Species: {species}</h2>
+            <h2>{species}</h2>
             {/* <h3>Type:{type}</h3> */}
-            <h4>Gender: {gender}</h4>
+            <h4>{gender}</h4>
             <h5>Origin: {origin}</h5>
             <h6>Location: {location}</h6>
             <button class="btn" onClick={click}><strong>→</strong></button>
-            {/* </fieldset>  */}
             <br></br>
             </span>
-         </div>
          </div>
    );
 }
