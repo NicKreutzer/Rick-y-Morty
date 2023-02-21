@@ -1,5 +1,6 @@
-import { click } from '@testing-library/user-event/dist/click';
+// import { click } from '@testing-library/user-event/dist/click';
 import React from 'react';
+import style from './Card.module.css';
 
 // const width1 = {    //! Se ajusta el fieldset a las imagenes, pero las corre a la derecha.
 //    width: 200,
@@ -11,19 +12,17 @@ import React from 'react';
 
 export default function Card({name, species, gender, image, origin, location, type, onClose}) {
    return (
-         <div id="card" class= "card">
-            <span>
-            <button class="btn" onClick={onClose}><strong>X</strong></button>
-            <h1><strong>{name}</strong></h1>
-            <img  src={image} alt={name}/>
-            <h2>{species}</h2>
+         <div className= {style.container}>
+            <button className={style.closeBtn} onClick={onClose}><strong>X</strong></button>
+            <h1 className={style.name}><strong>{name}</strong></h1>
+            <img className={style.img} src={image} alt={name}/>
+            <h2 className={style.species}>{species}</h2>
             {/* <h3>Type:{type}</h3> */}
-            <h4>{gender}</h4>
-            <h5>Origin: {origin}</h5>
-            <h6>Location: {location}</h6>
-            <button class="btn" onClick={click}><strong>→</strong></button>
+            <h4 className={style.gender}>{gender}</h4>
+            <h5 className={style.origin}>Origin: {origin}</h5>
+            <h6 className={style.location}>Location: {location}</h6>
+            {/* <button className={style.btn} onClick={click}><strong>→</strong></button> */}
             <br></br>
-            </span>
          </div>
    );
 }

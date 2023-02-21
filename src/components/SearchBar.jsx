@@ -1,7 +1,9 @@
+import style from './Card.module.css'
+
 export default function SearchBar(props) {
    return (
-      <div class= "search">
-         <input type='search' name = "search" id= "search" />
+      <div className= {style.search}>
+         <input type='search' id= "search" placeholder='Search...'/>
          <button onClick={() => props.onSearch("Character not found.")}>Search</button>
       </div>
    );

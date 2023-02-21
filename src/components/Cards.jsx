@@ -1,11 +1,11 @@
 import Card from './Card';
-
+import style from './Card.module.css'
 
 export default function Cards(props) {
    const { characters } = props;
 
    return (
-      <div>
+      <div className={style.cardsContainer}>
          {characters ? (characters.map((element) => (
             <Card
             name={element.name}
@@ -15,7 +15,7 @@ export default function Cards(props) {
             origin={element.origin}
             type={element.type}
             location={element.location}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
+            onClose={() => alert(element.name)}
             key={element.id}
             />
          ))) : (<h3>No hay personajes.</h3>)}

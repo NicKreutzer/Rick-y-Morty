@@ -1,0 +1,73 @@
+
+.cardsContainer{
+   display: flex;
+   justify-content: space-between;
+   flex-basis: auto;
+   flex-wrap: wrap;
+   gap: 5px;
+   width: fit-content;
+   height: fit-content;
+}
+.search{
+
+}
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: solid 1px rgb(14, 146, 1);
+   box-shadow: 2px 2px 3px 3px #16b600;
+   background-color: transparent;
+   border-radius: 0 20px 20px 20px;
+   margin: 2px;
+   width: fit-content;
+   height: fit-content;
+   justify-content: center; 
+   display:inline;
+    /* flex-direction: row-reverse; */
+}
+.name{
+   font-weight: bold;
+   font-size: 40px;
+}
+.species{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
+}
+.gender{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
+}
+.origin{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 15px;
+}
+.location{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 15px;
+}
+.img{
+   border: solid 5px rgb(2, 248, 23);
+   border-radius: 200px;
+   transition: 1s ease;
+} 
+.img:hover{
+   -webkit-transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transform: scale(1.2);
+   transition: 1s ease;
+}
+.closeBtn{
+   cursor: pointer;
+   background-color: transparent;
+   border-radius: 50px; /*Innecesario el border radius si tiene borde transparente*/
+   border-color: transparent;
+   width: 32px;
+   height: 32px;
+   display: flex;
+   align-items: center;
+   font-size: 18px;
+}
+.closeBtn:hover{
+   color: red;
+}
