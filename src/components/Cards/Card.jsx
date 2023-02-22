@@ -27,4 +27,3 @@ export default function Card({name, species, gender, image, origin, location, ty
    );
 }
 //module.exports = Card;
-//export default Card;

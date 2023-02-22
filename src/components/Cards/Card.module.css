@@ -1,16 +1,4 @@
 
-.cardsContainer{
-   display: flex;
-   justify-content: space-between;
-   flex-basis: auto;
-   flex-wrap: wrap;
-   gap: 5px;
-   width: fit-content;
-   height: fit-content;
-}
-.search{
-
-}
 .container{
    display: flex;
    flex-direction: column;
