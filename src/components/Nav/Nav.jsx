@@ -1,10 +1,10 @@
 
 import SearchBar from "../SearchBar/SearchBar";
 
-const Nav = ({onSearch})=>{
+const Nav = ({onSearch, emptyList})=>{
     return(
         <div>
-            <SearchBar onSearch={onSearch}/>
+            <SearchBar onSearch={onSearch} emptyList={emptyList}/>
         </div>
     )
 

@@ -22,16 +22,20 @@ function App () {
       });
 }
 
- const onClose = (id) => {
-   setCharacters(
-     characters.filter(character => character.id !== id)
-   )
- };
+const onClose = (id) => {
+  setCharacters(
+    characters.filter(character => character.id !== id)
+  )
+};
+
+const emptyList = (event)=>{
+  setCharacters([])
+};
 
   return (
     <div className= 'Background'>
       <div className='App' style={{ padding: '25px' }}>
-        <Nav onSearch={onSearch}/>
+        <Nav onSearch={onSearch} emptyList={emptyList}/>
       <br/>
         <div>
           <Cards
