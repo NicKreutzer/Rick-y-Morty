@@ -8,12 +8,13 @@ function App () {
 
   const [characters, setCharacters] = useState([]);
 
+  const URL_BASE = "https://be-a-rym.up.railway.app/api";
+  const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
+
   const onSearch= (character) => {
-    console.log("Character numero de id ingresa", character)
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    fetch(`${URL_BASE}/character/${character}?key=${API_KEY}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log("dentro de data ", data)
           if (data.name) {
               setCharacters((oldChars) => [...oldChars, data]);
           } else {

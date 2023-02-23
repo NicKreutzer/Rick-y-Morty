@@ -8,7 +8,7 @@
    background-color: transparent;
    border-radius: 0 20px 20px 20px;
    margin: 2px;
-   width: fit-content;
+   width: 300px;
    height: fit-content;
    justify-content: center; 
    display:inline;
@@ -16,7 +16,7 @@
 }
 .name{
    font-weight: bold;
-   font-size: 40px;
+   font-size: fit-content;
 }
 .species{
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
