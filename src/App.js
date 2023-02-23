@@ -1,44 +1,45 @@
 
 import './App.css'
-// import Card from './components/Card.jsx'
 import Cards from './components/Cards/Cards.jsx'
-import SearchBar from './components/SearchBar/SearchBar.jsx'
-import characters from './data.js'
-
+import Nav from './components/Nav/Nav'
+import {useState} from 'react'
 
 function App () {
+
+  const [characters, setCharacters] = useState([]);
+
+  const onSearch= (character) => {
+    console.log("Character numero de id ingresa", character)
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("dentro de data ", data)
+          if (data.name) {
+              setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+              window.alert('No hay personajes con ese ID');
+          }
+      });
+}
+
+ const onClose = (id) => {
+   setCharacters(
+     characters.filter(character => character.id !== id)
+   )
+ };
+
   return (
     <div className= 'Background'>
-      {/* <img src= 'https://poptv.orange.es/wp-content/uploads/sites/3/2018/03/Rick-and-Morty-3p-1100x619.jpg' className='Bgimg'> */}
-    <div className='App' style={{ padding: '25px' }}>
-      <div>
-        <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
-        />
+      <div className='App' style={{ padding: '25px' }}>
+        <Nav onSearch={onSearch}/>
+      <br/>
+        <div>
+          <Cards
+            characters={characters}
+            onClose={onClose}
+          />
       </div>
-      <br></br>
-      <div>
-        {/* <Card
-          name={characters.name}
-          species={characters.species}
-          gender={characters.gender}
-          image={characters.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        /> */}
-      </div>
-      {/* <hr /> */}
-      <div>
-        <Cards
-          characters={characters}
-        />
-      </div>
-      {/* <hr /> */}
-      <div>
-        {/* <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
-        /> */}
-      </div>
-    </div>
+        </div>
     </div>
   )
 }

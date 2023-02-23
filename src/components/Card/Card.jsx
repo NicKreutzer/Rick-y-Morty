@@ -10,17 +10,17 @@ import style from './Card.module.css';
 
 // import Card from './Card.module.css'
 
-export default function Card({name, species, gender, image, origin, location, type, onClose}) {
+export default function Card({id, name, species, gender, image, origin, location, type, onClose}) {
    return (
          <div className= {style.container}>
-            <button className={style.closeBtn} onClick={onClose}><strong>X</strong></button>
+            <button className={style.closeBtn} onClick={()=>onClose(id)}><strong>X</strong></button>
             <h1 className={style.name}><strong>{name}</strong></h1>
             <img className={style.img} src={image} alt={name}/>
             <h2 className={style.species}>{species}</h2>
             {/* <h3>Type:{type}</h3> */}
             <h4 className={style.gender}>{gender}</h4>
-            <h5 className={style.origin}>Origin: {origin}</h5>
-            <h6 className={style.location}>Location: {location}</h6>
+            {/* <h5 className={style.origin}>Origin: {origin}</h5>
+            <h6 className={style.location}>Location: {location}</h6> */}
             {/* <button className={style.btn} onClick={click}><strong>→</strong></button> */}
             <br></br>
          </div>
