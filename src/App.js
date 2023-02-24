@@ -16,12 +16,19 @@ function App () {
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {
+            const existingChar = characters.find((char) => char.id === data.id);
+            if (!existingChar) {
               setCharacters((oldChars) => [...oldChars, data]);
+            } else {
+              window.alert('Este personaje ya ha sido agregado a la lista');
+            }
           } else {
               window.alert('No hay personajes con ese ID');
           }
       });
 }
+
+//! else if en vez de else y agregarle si coincide la id con algo ya llamado o no.
 
 const onClose = (id) => {
   setCharacters(
