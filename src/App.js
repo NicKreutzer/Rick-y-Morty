@@ -3,6 +3,9 @@ import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav'
 import {useState} from 'react'
+import About from './components/About/About'
+import Detail from './components/Detail/Detail'
+import { Routes, Route } from 'react-router-dom'
 
 function App () {
 
@@ -28,7 +31,6 @@ function App () {
       });
 }
 
-//! else if en vez de else y agregarle si coincide la id con algo ya llamado o no.
 
 const onClose = (id) => {
   setCharacters(
@@ -45,11 +47,13 @@ const emptyList = (event)=>{
       <div className='App' style={{ padding: '25px' }}>
         <Nav onSearch={onSearch} emptyList={emptyList}/>
       <br/>
+      <Routes>
+        <Route path="/home" element={ <Cards characters={characters} onClose={onClose}/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:detailId" element={<Detail />} />
+      </Routes>
         <div>
-          <Cards
-            characters={characters}
-            onClose={onClose}
-          />
+         
       </div>
         </div>
     </div>

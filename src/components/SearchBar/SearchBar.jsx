@@ -15,7 +15,7 @@ const generateRandomId = () => {
 };
 
    return (
-      <div className= {style.search}>
+      <div className= {style.searchBar}>
          <input type='search' value={character} onChange={handleChange} placeholder='Add...'/>
          <button onClick={() => onSearch(character)}>Add</button>
          <button onClick={generateRandomId}>Add Random</button>

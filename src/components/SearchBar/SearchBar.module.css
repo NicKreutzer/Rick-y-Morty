@@ -1,23 +1,23 @@
-.search{
-    display:flex;
-    margin: auto;
-    width: 15%;
-    margin-top: 5px;
-    }
-    .search input{
-       border-radius: 20px;
-       height: 30px;
-    }
-    .search button{
-       border-radius: 20px;
-       height: 30px;
-       background-color: chartreuse;
-       color: black;
-       padding: 0 10px 0 10px;
-       font-size: 10px;
-       border: 1px;
-    }
-    .search button:hover{
-       background-color: #16b600;
-       color: white;
-    }
+.searchBar{
+   display:flex;
+   margin: auto;
+   width: 15%;
+   margin-top: 5px;
+}
+.searchBar input{
+   border-radius: 20px;
+   height: 30px;
+}
+.searchBar button{
+   border-radius: 20px;
+   height: 30px;
+   background-color: chartreuse;
+   color: black;
+   padding: 0 10px 0 10px;
+   font-size: 10px;
+   border: 1px;
+}
+.searchBar button:hover{
+   background-color: #16b600;
+   color: white;
+}

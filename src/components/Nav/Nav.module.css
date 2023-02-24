@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+}
+.container button{
+    border-radius: 20px;
+    height: 30px;
+    margin: 5px;
+    background-color: chartreuse;
+    color: black;
+    padding: 0 10px 0 10px;
+    font-size: 10px;
+    border: 1px;
+}
+.container button:hover{
+    background-color: #16b600;
+    color: white;
+}
