@@ -12,6 +12,7 @@
     padding: 0 10px 0 10px;
     font-size: 10px;
     border: 1px;
+    cursor: pointer;
 }
 .container button:hover{
     background-color: #16b600;

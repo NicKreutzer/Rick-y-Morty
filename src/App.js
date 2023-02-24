@@ -54,7 +54,6 @@ const emptyList = (event)=>{
         {/* <Route path= "*"><h1>404</h1><br/>Page not Found</Route> */}
       </Routes>
         <div>
-         
       </div>
         </div>
     </div>
