@@ -7,15 +7,18 @@ import style from "./Nav.module.css"
 const Nav = ({onSearch, emptyList})=>{
     return(
         <div className= {style.container}>
-            <SearchBar onSearch={onSearch} emptyList={emptyList}/>
-            <button as={Link} to= "/home">Home</button>
-            <button as={Link} to= "/about">About</button>
-            {/* <Link to= "/home">
-            <span>Home</span>
+            <Link to= "/">
+            <button>Home</button>
             </Link>
+            <SearchBar onSearch={onSearch} emptyList={emptyList}/>
+            {/* <button as={Link} to= "/">Home</button>
+            <button as={Link} to= "/about">About</button> */}
+            
+            {/* -button as Link no renderiza bien chequear.- */}
+            
             <Link to= "/about">
-            <span>About</span>
-            </Link> */}
+            <button>About</button>
+            </Link>
         </div>
     )
 

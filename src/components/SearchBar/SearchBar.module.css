@@ -2,13 +2,13 @@
    display:flex;
    margin: auto;
    width: 15%;
-   margin-top: 5px;
+   /* margin-top: 5px; */
 }
 .searchBar input{
    border-radius: 20px;
    height: 30px;
 }
-.searchBar button{
+/* .searchBar button{
    border-radius: 20px;
    height: 30px;
    background-color: chartreuse;
@@ -21,4 +21,4 @@
 .searchBar button:hover{
    background-color: #16b600;
    color: white;
-}
+} */

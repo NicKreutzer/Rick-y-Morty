@@ -10,6 +10,7 @@ export default function Cards({ characters, onClose }) {
          {characters.map((element) => (
             <Card
             id = {element.id}
+            key={element.id}
             name={element.name}
             species={element.species}
             gender={element.gender}
@@ -18,7 +19,6 @@ export default function Cards({ characters, onClose }) {
             type={element.type}
             location={element.location}
             onClose={onClose}
-            key={element.id}
             />
          ))}
          </div>

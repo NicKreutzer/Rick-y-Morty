@@ -1,10 +1,10 @@
+
 import { Link, useParams } from "react-router-dom"
-import { useState } from "react"
-import { useEffect } from "react";
+import { useState, useEffect } from "react"
 
 export default function Detail (props){
 
-    const {detailID} = useParams();
+    const {detailId} = useParams();
     const [character, setCharacter] = useState({});
     
     const URL_BASE = "https://be-a-rym.up.railway.app/api";
@@ -12,7 +12,7 @@ export default function Detail (props){
 
 
     useEffect((character) => {
-        fetch(`${URL_BASE}/character/${character}?key=${API_KEY}`)
+        fetch(`${URL_BASE}/character/${detailId}?key=${API_KEY}`)
             .then((response) => response.json())
             .then((char) => {
             if (char.name) {
@@ -25,16 +25,19 @@ export default function Detail (props){
             window.alert("No hay personajes con ese ID");
         });
         return setCharacter({});
-    }, [detailID]);
+    }, [detailId]);
 
     return(
         <div>
-            <button as={Link} to= "/home">Back</button>
+            {/* <button as={Link} to= "/">Back</button> */}
+            <Link to="/">
+            <button>Back</button>
+            </Link>
             <h1>Detail</h1>
             <h2>{character.name}</h2>
             <img src={character.image} alt={character.name} />
-            <h3>{character.origin.name}</h3>
-            <h3>{character.location.name}</h3>
+            {character.origin && <h3>{character.origin.name}</h3>}
+            {character.location && <h3>{character.location.name}</h3>}
         </div>
     )
 }
