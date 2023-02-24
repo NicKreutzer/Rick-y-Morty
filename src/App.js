@@ -48,9 +48,10 @@ const emptyList = (event)=>{
         <Nav onSearch={onSearch} emptyList={emptyList}/>
       <br/>
       <Routes>
-        <Route path="/home" element={ <Cards characters={characters} onClose={onClose}/>} />
+        <Route path="/" element={ <Cards characters={characters} onClose={onClose}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailId" element={<Detail />} />
+        {/* <Route path= "*"><h1>404</h1><br/>Page not Found</Route> */}
       </Routes>
         <div>
          
