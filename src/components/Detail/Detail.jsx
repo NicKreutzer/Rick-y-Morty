@@ -30,12 +30,13 @@ export default function Detail (props){
     return(
         <div>
             {/* <button as={Link} to= "/">Back</button> */}
-            <Link to="/">
+            <Link to="/home">
             <button>Back</button>
             </Link>
-            <h1>Detail</h1>
-            <h2>{character.name}</h2>
+            {/* <h1>Detail</h1> */}
+            <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} />
+            {character.type && <h3>{character.type}</h3>}
             {character.origin && <h3>{character.origin.name}</h3>}
             {character.location && <h3>{character.location.name}</h3>}
         </div>

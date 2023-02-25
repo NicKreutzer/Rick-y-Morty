@@ -7,7 +7,7 @@ import style from "./Nav.module.css"
 const Nav = ({onSearch, emptyList})=>{
     return(
         <div className= {style.container}>
-            <Link to= "/">
+            <Link to= "/home">
             <button>Home</button>
             </Link>
             <SearchBar onSearch={onSearch} emptyList={emptyList}/>
@@ -18,6 +18,10 @@ const Nav = ({onSearch, emptyList})=>{
             
             <Link to= "/about">
             <button>About</button>
+            </Link>
+            <br/>
+            <Link to= "/">
+            <button>Log Out</button>
             </Link>
         </div>
     )
