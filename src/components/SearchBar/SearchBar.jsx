@@ -2,6 +2,7 @@
 import style from './SearchBar.module.css'
 import { useState } from 'react';
 
+
 export default function SearchBar({onSearch, emptyList}) {
 
    const [character, setCharacter] = useState("");
@@ -20,7 +21,7 @@ const generateRandomId = () => {
          <input type='search' name= "search" id= "search"
          value={character} 
          onChange={handleChange} 
-         placeholder='Add...'/>
+         placeholder='Add...'></input>
          <button onClick={() => onSearch(character)}>Add</button>
          <button onClick={generateRandomId}>Add Random</button>
          <button onClick={() => emptyList()}>Clean</button>

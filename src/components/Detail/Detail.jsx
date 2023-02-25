@@ -1,6 +1,7 @@
 
 import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import style from './Detail.module.css'
 
 export default function Detail (props){
 
@@ -28,17 +29,17 @@ export default function Detail (props){
     }, [detailId]);
 
     return(
-        <div>
+        <div className={style.container}>
             {/* <button as={Link} to= "/">Back</button> */}
             <Link to="/home">
             <button>Back</button>
             </Link>
             {/* <h1>Detail</h1> */}
             <h1>{character.name}</h1>
-            <img src={character.image} alt={character.name} />
-            {character.type && <h3>{character.type}</h3>}
-            {character.origin && <h3>{character.origin.name}</h3>}
-            {character.location && <h3>{character.location.name}</h3>}
+            <img src={character.image} alt={character.name} className={style.img}/>
+            {character.type && <h3>Type: {character.type}</h3>}
+            {character.origin && <h3>Origin:  {character.origin.name}</h3>}
+            {character.location && <h3>Location:  {character.location.name}</h3>}
         </div>
     )
 }

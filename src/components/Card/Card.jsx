@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // import Card from './Card.module.css'
 
+
 export default function Card({id, name, species, gender, image, origin, location, type, onClose}) {
    return (
          <div className= {style.container}>

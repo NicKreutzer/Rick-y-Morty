@@ -1,14 +1,15 @@
 import style from "./About.module.css"
+import Banner from '../../components/Banner.jpg'
 
 export default function About (props){
 
     return(
         <div className={style.container}>
-            <h3>Nicolás Exequiel Kreutzer</h3>
+            <h3 className={style.name}>Nicolás Exequiel Kreutzer</h3>
             <br/>
-            <img src= "../components/Banner.jpg" alt= "Nicolás Kreutzer" className={style.img}/>
+            <img src= {Banner} alt= "Nicolás Kreutzer" className={style.img}/>
             <br/>
-            <p>Descripcion a completar acerca de mi.</p>
+            <p className={style.description}>Descripcion a completar acerca de mi.</p>
         </div>
     )
 };
