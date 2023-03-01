@@ -2,29 +2,32 @@
 import React, { useEffect, useState } from 'react';
 import style from './Card.module.css';
 import { Link } from 'react-router-dom';
-import { removeFavorites, addFavorites } from '../Redux/actions';
-import { connect } from 'react-redux';
+import { removeFavorites, addFavorites } from '../../Redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
 // import Card from './Card.module.css'
 
 
-export function Card({id, name, species, gender, image, origin, location, type, onClose}) {
+export default function Card({id, name, species, gender, image, origin, location, type, onClose}) {
    
    const [isFav, setIsFav] = useState(false);
+   const dispatch = useDispatch();
+   const myFavorites = useSelector(state => state.myFavorites);
+   
    useEffect(()=>{
-      props.myFavorites.forEach((fav)=>{
-         if (fav.id === props.id){
+      myFavorites.forEach((fav)=>{
+         if (fav.id === id){
             setIsFav(true);
          }
       })
-   }, [props.myFavorites]);
+   }, [myFavorites]);
 
    function handleFavorite(){
       if(isFav) {
          setIsFav(false);
-         props.removeFavorites(id)
+         dispatch(removeFavorites(id))
       }else{
          setIsFav(true);
-         props.addFavorites(id)
+         dispatch(addFavorites({id, name, species, gender, image, origin, location, type, onClose}))
       }
    }
    
@@ -32,6 +35,13 @@ export function Card({id, name, species, gender, image, origin, location, type, 
          <div className= {style.container}>
             <div>
             <button className={style.closeBtn} onClick={()=>onClose(id)}><strong>X</strong></button>
+            {
+               isFav ? (
+                  <button className={style.favBtn} onClick={handleFavorite}>❤️</button>
+                     ) : (
+                     <button className={style.favBtn} onClick={handleFavorite}>🤍</button>
+                  )
+            }
             </div>
             <h1 className={style.name}><strong>{name}</strong></h1>
             <div>
@@ -45,28 +55,25 @@ export function Card({id, name, species, gender, image, origin, location, type, 
             {/* <h5 className={style.origin}>Origin: {origin.name}</h5>
             <h6 className={style.location}>Location: {location.name}</h6> */}
             {/* <button className={style.btn} onClick={click}><strong>→</strong></button> */}
-            {isFav? (
-               <button onClick={handleFavorite}>❤️</button>
-            ): (<button onClick={handleFavorite}>🤍</button>)}
          </div>
    );
 }
 
-export function mapStateToProps(state){
-   return {
-      myFavorites: state.myFavorites
-   }
-}
+// export function mapStateToProps(state){
+//    return {
+//       myFavorites: state.myFavorites
+//    }
+// }
 
-export function mapDispatchToProps(dispatch){
-   return{
-      addFavorites: function (character){
-         dispatch(addFavorites(character))
-      },
-      removeFavorites: function (id){
-         dispatch(removeFavorites(id))
-      }
-   }
-}
+// export function mapDispatchToProps(dispatch){
+//    return{
+//       addFavorites: function (character){
+//          dispatch(addFavorites(character))
+//       },
+//       removeFavorites: function (id){
+//          dispatch(removeFavorites(id))
+//       }
+//    }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Card)
+// export default connect(mapStateToProps, mapDispatchToProps)(Card)

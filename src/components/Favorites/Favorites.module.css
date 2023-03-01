@@ -1,0 +1,26 @@
+.name{
+    font-weight: bold;
+    font-size: fit-content;
+    color: #0d7501;
+ }
+ .species{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+ }
+ .gender{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+ }
+ .origin{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+ }
+ .location{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+ }
+ .img{
+    border: solid 5px rgb(2, 248, 23);
+    border-radius: 200px;
+    transition: 1s ease;
+ } 

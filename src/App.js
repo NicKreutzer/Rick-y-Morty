@@ -8,6 +8,7 @@ import Detail from './components/Detail/Detail'
 import { Route, Routes} from 'react-router-dom'
 import Form from './components/Form/Form'
 import { useLocation, useNavigate } from 'react-router-dom'
+import Favorites from './components/Favorites/Favorites'
 
 
 function App () {
@@ -90,6 +91,7 @@ const emptyList = (event)=>{
         <Route exact path="/about" element={<About />} />
         <Route exact path="/" element={<Form login={login}/>}/>
         <Route exact path="/detail/:detailId" element={<Detail />} />
+        <Route exact path="favorites" element={<Favorites/>} />
       </Routes>
         {/* <Route ><h1>404</h1><br/>Page not Found</Route> */}
         <div>

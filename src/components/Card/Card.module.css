@@ -60,3 +60,15 @@
 .closeBtn:hover{
    color: red;
 }
+.favBtn{
+   cursor: pointer;
+   background-color: transparent;
+   border-radius: 50px; /*Innecesario el border radius si tiene borde transparente*/
+   border-color: transparent;
+   width: 32px;
+   height: 32px;
+   display: flex;
+   align-items: center;
+   font-size: 18px;
+   justify-self: flex-end;
+}
