@@ -10,6 +10,9 @@ import Form from './components/Form/Form'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Favorites from './components/Favorites/Favorites'
 
+// function NotFound() {
+//   return <h1>404 - Page not found</h1>;
+// }
 
 function App () {
 
@@ -42,7 +45,7 @@ function App () {
           const existingChar = characters.find((char) => char.id === data.id);
           if (!existingChar) {
             setCharacters((oldChars) => [...oldChars, data]);
-            navigate(`/detail/${data.id}`);
+            // navigate(`/detail/${data.id}`);
           } else {
             navigate(`/characters/${data.id}`, { state: { message: 'Este personaje ya ha sido agregado a la lista' } });
           }
@@ -92,8 +95,8 @@ const emptyList = (event)=>{
         <Route exact path="/" element={<Form login={login}/>}/>
         <Route exact path="/detail/:detailId" element={<Detail />} />
         <Route exact path="favorites" element={<Favorites/>} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-        {/* <Route ><h1>404</h1><br/>Page not Found</Route> */}
         <div>
       </div>
         </div>

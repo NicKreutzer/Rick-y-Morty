@@ -8,19 +8,23 @@ export default function Form({login}){
         password: '',
     });
 
-    const [errors, setErrors] = React.useState({
-
-    })
+    const [errors, setErrors] = React.useState({})
 
     function handleInputChange(event){
         setErrors(validate({...userData, [event.target.name] : event.target.value}));
         setUserData({...userData, [event.target.name] : event.target.value});
-    }
+    };
 
     function handleSubmit(event){
         event.preventDefault()
         login(userData)
-    }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.key === 'NumpadEnter') {
+            handleSubmit(event);
+        }
+    };
 
     return(
         <div>
@@ -31,6 +35,7 @@ export default function Form({login}){
                 name= 'username' 
                 placeholder= 'Username' 
                 onChange= {handleInputChange}
+                onKeyDown= {handleKeyDown}
                 value = {userData.username}
                 ></input>
 

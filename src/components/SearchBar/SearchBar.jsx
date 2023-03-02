@@ -5,10 +5,16 @@ import { useState } from 'react';
 
 export default function SearchBar({onSearch, emptyList}) {
 
-   const [character, setCharacter] = useState("");
+const [character, setCharacter] = useState("");
 
 const handleChange = (event)=> {
    setCharacter(event.target.value)
+};
+
+const handleKeyDown = (event) => {
+   if (event.key === 'Enter' || event.key === 'NumpadEnter') {
+      onSearch(character);
+   }
 };
 
 const generateRandomId = () => {
@@ -20,7 +26,8 @@ const generateRandomId = () => {
       <div className= {style.searchBar}>
          <input type='search' name= "search" id= "search"
          value={character} 
-         onChange={handleChange} 
+         onChange={handleChange}
+         onKeyDown={handleKeyDown}
          placeholder='Add...'></input>
          <button onClick={() => onSearch(character)}>Add</button>
          <button onClick={generateRandomId}>Add Random</button>
