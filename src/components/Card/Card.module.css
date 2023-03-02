@@ -10,9 +10,14 @@
    margin: 2px;
    width: 300px;
    height: fit-content;
-   justify-content: center; 
    display:inline;
+   justify-content: space-between; 
     /* flex-direction: row-reverse; */
+}
+.header {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
 }
 .name{
    font-weight: bold;

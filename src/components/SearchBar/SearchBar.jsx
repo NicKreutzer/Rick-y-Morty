@@ -24,7 +24,7 @@ const generateRandomId = () => {
          placeholder='Add...'></input>
          <button onClick={() => onSearch(character)}>Add</button>
          <button onClick={generateRandomId}>Add Random</button>
-         <button onClick={() => emptyList()}>Clean</button>
+         <button onClick={() => emptyList()}>Clear</button>
       </div>
    );
 }

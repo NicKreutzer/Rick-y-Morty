@@ -32,11 +32,13 @@ export default function Detail (props){
         <div className={style.container}>
             {/* <button as={Link} to= "/">Back</button> */}
             <Link to="/home">
-            <button>Back</button>
+            <button className={style.btn}>Back</button>
             </Link>
             {/* <h1>Detail</h1> */}
             <h1>{character.name}</h1>
             <img src={character.image} alt={character.name} className={style.img}/>
+            <h3>{character.species}</h3>
+            <h3>{character.gender}</h3>
             {character.type && <h3>Type: {character.type}</h3>}
             {character.origin && <h3>Origin:  {character.origin.name}</h3>}
             {character.location && <h3>Location:  {character.location.name}</h3>}
