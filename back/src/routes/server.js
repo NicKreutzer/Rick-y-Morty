@@ -1,3 +1,5 @@
+
+
 const http = require ('http');
 const characters = require('../utils/data');
 
@@ -11,4 +13,4 @@ http.createServer((req, res) =>{
 
         res.writeHead(200, {"Content-type" : "application/json"}).end(JSON.stringify(characterFilter))
     }
-}).listen(3001, 'localhost')
+}).listen(3001, 'localhost');
