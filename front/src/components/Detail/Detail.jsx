@@ -8,12 +8,28 @@ export default function Detail (props){
     const {detailId} = useParams();
     const [character, setCharacter] = useState({});
     
-    const URL_BASE = "https://be-a-rym.up.railway.app/api";
-    const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    // const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
 
+
+    // useEffect((character) => {
+    //     fetch(`${URL_BASE}/character/${detailId}?key=${API_KEY}`)
+    //         .then((response) => response.json())
+    //         .then((char) => {
+    //         if (char.name) {
+    //             setCharacter(char);
+    //         } else {
+    //             window.alert("No hay personajes con ese ID");
+    //         }
+    //     })
+    //     .catch((err) => {
+    //         window.alert("No hay personajes con ese ID");
+    //     });
+    //     return setCharacter({});
+    // }, [detailId]);
 
     useEffect((character) => {
-        fetch(`${URL_BASE}/character/${detailId}?key=${API_KEY}`)
+        fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
             .then((response) => response.json())
             .then((char) => {
             if (char.name) {
@@ -40,8 +56,8 @@ export default function Detail (props){
             <h3>{character.species}</h3>
             <h3>{character.gender}</h3>
             {character.type && <h3>Type: {character.type}</h3>}
-            {character.origin && <h3>Origin:  {character.origin.name}</h3>}
-            {character.location && <h3>Location:  {character.location.name}</h3>}
+            {character.origin && <h3>Origin:  {character.origin}</h3>}
+            {character.location && <h3>Location:  {character.location}</h3>}
         </div>
     )
 }

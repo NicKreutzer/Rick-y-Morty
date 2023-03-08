@@ -34,8 +34,8 @@ function App () {
   }, [access]);
 
 
-  const URL_BASE = "https://be-a-rym.up.railway.app/api";
-  const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
+  // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+  // const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
 
   // const onSearch = (character) => {
   //   fetch(`${URL_BASE}/character/${character}?key=${API_KEY}`)
@@ -56,7 +56,7 @@ function App () {
   // };
 
   const onSearch = (character) => {
-    fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
