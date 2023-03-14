@@ -7,7 +7,7 @@ var { addFav, getFavs, deleteFav } = require("../controllers/favController.js");
 const router = Router();
 
 router.get("/onsearch/:id", getCharById);
-router.get("/detail/:id", getCharDetail);
+router.get("/detail/:detailId", getCharDetail);
 
 router.post("/fav", addFav);
 router.get("/fav", getFavs);

@@ -1,10 +1,12 @@
 
-var axios = require("axios");
-const { filterData, URL } = require("./getCharById.js");
+const axios = require("axios");
+const URL = "https://rickandmortyapi.com/api/character/";
 
 // Agregamos ASYNC AWAIT
 const getCharDetail = async (req, res) => {
-  const params = req.params;
+  const {detailId} = req.params;
+  console.log(detailId)
+  id = toString(detailId)
 
   // axios
   //   .get(`${URL}${params.id}`)
@@ -17,13 +19,26 @@ const getCharDetail = async (req, res) => {
   //   });
 
   try {
-    const { data } = await axios.get(`${URL}${params.id}`);
+    const { data } = axios.get(`https://rickandmortyapi.com/api/character/${id}`);
+    console.log("ssssssssssssssssssss",data)
     const obj = filterData(data);
-    res.status(200).json({ ...obj, status: data.status, origin: data.origin });
+    res.status(200).json(obj);
   } catch (error) {
     res.status(500).json({ message: error });
   }
 };
+
+function filterData(data) {
+  return {
+      id: data.id,
+      image: data.image,
+      name: data.name,
+      gender: data.gender,
+      species: data.species,
+      status: data.status,
+      origin: data.origin.name
+  };
+}
 
 module.exports = { getCharDetail };
 

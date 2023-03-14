@@ -55,7 +55,7 @@ function filterData(data) {
     };
 }
 
-module.exports = { getCharById, filterData, URL };
+module.exports = { getCharById };
 
 // const axios = require ('axios');
 
