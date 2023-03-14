@@ -54,24 +54,20 @@ function App () {
   //       }
   //     });
   // };
-
-  const onSearch = (character) => {
+  function onSearch(character) {
+    //fetch(`https://rickandmortyapi.com/api/character/${character}`)
     fetch(`http://localhost:3001/onsearch/${character}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
-          const existingChar = characters.find((char) => char.id === data.id);
-          if (!existingChar) {
-            setCharacters((oldChars) => [...oldChars, data]);
-            // navigate(`/detail/${data.id}`);
-          } else {
-            navigate(`/characters/${data.id}`, { state: { message: 'Este personaje ya ha sido agregado a la lista' } });
-          }
+          characters.find((element) => element.id === data.id) === undefined
+            ? setCharacters((characters) => [...characters, data])
+            : alert("Personaje repetido, prueba otro ID.");
         } else {
-          navigate('/not-found', { state: { message: 'No hay personajes con ese ID' } });
+          alert("No hay personajes con ese ID.");
         }
       });
-  };
+  }
 
 
 const onClose = (id) => {

@@ -3,9 +3,10 @@ import { Link, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import style from './Detail.module.css'
 
-export default function Detail (props){
+export default function Detail (){
 
-    const {detailId} = useParams();
+    const { detailId } = useParams();
+    // console.log("ssssssssssssssssssssssssssss",detailId)
     const [character, setCharacter] = useState({});
     
     // const URL_BASE = "https://be-a-rym.up.railway.app/api";
@@ -28,10 +29,11 @@ export default function Detail (props){
     //     return setCharacter({});
     // }, [detailId]);
 
-    useEffect((character) => {
-        fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+    useEffect(() => {
+        fetch(`http://localhost:3001/detail/${detailId}`)
             .then((response) => response.json())
             .then((char) => {
+                console.log(char);
             if (char.name) {
                 setCharacter(char);
             } else {
@@ -55,9 +57,9 @@ export default function Detail (props){
             <img src={character.image} alt={character.name} className={style.img}/>
             <h3>{character.species}</h3>
             <h3>{character.gender}</h3>
-            {character.type && <h3>Type: {character.type}</h3>}
-            {character.origin && <h3>Origin:  {character.origin}</h3>}
-            {character.location && <h3>Location:  {character.location}</h3>}
+            {character.type && (<h3>Type: {character.type}</h3>)}
+            {character.origin && (<h3>Origin:  {character.origin.name}</h3>)}
+            {character.location && (<h3>Location:  {character.location.name}</h3>)}
         </div>
     )
 }
