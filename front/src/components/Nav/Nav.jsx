@@ -7,15 +7,15 @@ import style from "./Nav.module.css"
 const Nav = ({onSearch, emptyList})=>{
     return(
         <div className= {style.container}>
-            <Link to= "/home"><button>Home</button></Link>
-            <Link to= '/favorites'><button>Favorites</button></Link>
+            <Link to= "/home"><button className={style.btnHome}>Home</button></Link>
+            <Link to= '/favorites'><button className={style.btnFav}>Favorites</button></Link>
             <SearchBar onSearch={onSearch} emptyList={emptyList}/> 
             <Link to= "/about">
-            <button>About</button>
+            <button className={style.btnAbt}>About</button>
             </Link>
             <br/>
             <Link to= "/">
-            <button>Log Out</button>
+            <button className={style.btnLO}>Log Out</button>
             </Link>
         </div>
     )

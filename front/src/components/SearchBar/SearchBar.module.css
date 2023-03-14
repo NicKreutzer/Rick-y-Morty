@@ -1,24 +1,29 @@
 .searchBar{
-   display:flex;
+   display: flex;
    margin: auto;
-   width: 15%;
-   /* margin-top: 5px; */
+   width: 250px;
+   height: 37px;
 }
 .searchBar input{
    border-radius: 20px;
-   height: 30px;
+   height: 37px;
+   width: 300px;
+   margin-right: 5px;
+   font-size: larger;
 }
-/* .searchBar button{
+.searchBar button {
    border-radius: 20px;
-   height: 30px;
+   height: 37px;
    background-color: chartreuse;
    color: black;
-   padding: 0 10px 0 10px;
-   font-size: 10px;
+   font-size: 13px;
    border: 1px;
    cursor: pointer;
+   font-family: cursive;
+   font-weight: bolder;
 }
-.searchBar button:hover{
+
+.searchBar button:hover {
    background-color: #16b600;
    color: white;
-} */
+}
