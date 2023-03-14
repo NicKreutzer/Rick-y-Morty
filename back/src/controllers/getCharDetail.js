@@ -2,7 +2,6 @@
 const axios = require("axios");
 const URL = "https://rickandmortyapi.com/api/character/";
 
-// Agregamos ASYNC AWAIT
 const getCharDetail = async (req, res) => {
   const {detailId} = req.params;
   console.log(detailId)
@@ -19,8 +18,7 @@ const getCharDetail = async (req, res) => {
   //   });
 
   try {
-    const { data } = axios.get(`https://rickandmortyapi.com/api/character/${id}`);
-    console.log("ssssssssssssssssssss",data)
+    const { data } = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
     const obj = filterData(data);
     res.status(200).json(obj);
   } catch (error) {
@@ -36,7 +34,8 @@ function filterData(data) {
       gender: data.gender,
       species: data.species,
       status: data.status,
-      origin: data.origin.name
+      origin: data.origin?.name,
+      location: data.location?.name
   };
 }
 

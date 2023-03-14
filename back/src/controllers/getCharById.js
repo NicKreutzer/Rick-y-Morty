@@ -24,7 +24,7 @@ const URL = "https://rickandmortyapi.com/api/character/";
 
 // Agregamos ASYNC AWAIT
 const getCharById = async (req, res) => {
-  const params = req.params;
+  const {id} = req.params;
 
   // axios
   //   .get(`${URL}${params.id}`)
@@ -37,7 +37,7 @@ const getCharById = async (req, res) => {
   //   });
 
   try {
-    const { data } = await axios.get(`${URL}${params.id}`);
+    const { data } = await axios.get(`${URL}${id}`);
     const obj = filterData(data);
     res.status(200).json(obj);
   } catch (error) {
