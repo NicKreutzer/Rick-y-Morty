@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import style from "./Favorites.module.css";
 import { Link } from "react-router-dom";
-import { orderCards, filterCards } from "../../Redux/actions";
+import { orderCards, filterCards, removeFavorites } from "../../Redux/actions";
 
 
 const Favorites = () => {
@@ -14,7 +14,9 @@ const Favorites = () => {
     const handlerFilter = (event) => {
         dispatch(filterCards(event.target.value))
     }
-
+    const handlerFavorites = (id) => {
+        dispatch(removeFavorites(id));
+    };
 
     return(
         <div>
@@ -36,6 +38,7 @@ const Favorites = () => {
                 myFavorites.map((character)=>{
                     return(
                         <div>
+                            <button className={style.removeBtn} onClick={() => handlerFavorites(character.id)}>❤️</button>
                             <h1 className={style.name}><strong>{character.name}</strong></h1>
                             <div>
                             <Link to={`/detail/${character.id}`}>

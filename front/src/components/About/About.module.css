@@ -15,22 +15,28 @@
     justify-content: space-around;
 }
 .contName{
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     justify-content: center;
     width: fit-content;
     height: fit-content;
     border-radius: 300px;
+    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
 }
 .name{
     color: black;
     margin: 0;
+    font-size: 30px;
+    text-decoration: underline;
+    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
 }
 .img{
     width: 150px;
     height: 200px;
 }
 .contDescription{
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
+    color: aliceblue;
     width: fit-content;
     height: fit-content;
     border-radius: 300px;
@@ -39,4 +45,5 @@
     color: black;
     font-weight: bolder;
     margin: 0;
+    font-size: 20px;
 }

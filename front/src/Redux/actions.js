@@ -51,7 +51,9 @@ export function removeFavorites(id){return async function (dispatch) {
 
         const data = await fetch(`http://localhost:3001/fav/${id}`, {
         method: "DELETE",}).then((response) => response.json());
-        if (data.success) dispatch({ type: REMOVE_FAV, payload: id });
+        if (data.success) 
+        dispatch({ type: REMOVE_FAV, payload: id });
+        dispatch(getFavs());
     } catch (error) {
         console.log(error)}
     }

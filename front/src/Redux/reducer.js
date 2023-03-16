@@ -10,7 +10,7 @@ export default function reducer(state = initialState, {type, payload}){
         case ADD_FAV: 
         return {
             ...state,
-            myFavorites: [...state.allCharacters, payload],
+            myFavorites: [...state.myFavorites, payload],
             allCharacters: [...state.allCharacters, payload]
     }
         case REMOVE_FAV: 
