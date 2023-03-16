@@ -29,7 +29,7 @@ const generateRandomId = () => {
          onChange={handleChange}
          onKeyDown={handleKeyDown}
          placeholder='Add...'></input>
-         <button onClick={generateRandomId}>Add Random</button>
+         <button onClick={generateRandomId}>Random</button>
          <button onClick={() => onSearch(character)}>Add</button>
          <button onClick={() => emptyList()}>Clear</button>
       </div>

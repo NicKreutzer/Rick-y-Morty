@@ -49,6 +49,10 @@
     content: "Type: ";
     color: rgb(1, 83, 1);
 }
+.status::before{
+    content: "Status: ";
+    color: rgb(1, 83, 1);
+}
 .origin::before{
     content: "Origin: ";
     color: rgb(1, 83, 1);

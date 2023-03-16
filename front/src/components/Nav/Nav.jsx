@@ -9,6 +9,7 @@ const Nav = ({onSearch, emptyList})=>{
         <div className= {style.container}>
             <Link to= "/home"><button className={style.btnHome}>Home</button></Link>
             <Link to= '/favorites'><button className={style.btnFav}>Favorites</button></Link>
+            <Link to="/location" className={style.btnLoc}><button>Locations</button></Link>
             <SearchBar onSearch={onSearch} emptyList={emptyList}/> 
             <Link to= "/about">
             <button className={style.btnAbt}>About</button>

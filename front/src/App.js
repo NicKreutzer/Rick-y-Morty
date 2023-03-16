@@ -1,14 +1,15 @@
 
 import './App.css'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { Route, Routes} from 'react-router-dom'
+import {useEffect, useState} from 'react'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav'
-import {useEffect, useState} from 'react'
 import About from './components/About/About'
 import Detail from './components/Detail/Detail'
-import { Route, Routes} from 'react-router-dom'
 import Form from './components/Form/Form'
-import { useLocation, useNavigate } from 'react-router-dom'
 import Favorites from './components/Favorites/Favorites'
+import Locations from './components/Locations/Locations'
 
 // function NotFound() {
 //   return <h1>404 - Page not found</h1>;
@@ -23,18 +24,7 @@ function App () {
   const username = "nicolaskreutzer@hotmail.com.ar";
   const password = "hola123";
 
-  function login (userData){
-    if(userData.username ===username && userData.ppassword === password)
-    setAccess(true);
-    navigate('/home');
-  }
-
-  useEffect(()=>{
-    !access && navigate('/');
-  }, [access]);
-
-
-  // const URL_BASE = "https://be-a-rym.up.railway.app/api";
+    // const URL_BASE = "https://be-a-rym.up.railway.app/api";
   // const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
 
   // const onSearch = (character) => {
@@ -69,6 +59,15 @@ function App () {
       });
   }
 
+  function login (userData){
+    if(userData.username ===username && userData.ppassword === password)
+    setAccess(true);
+    navigate('/home');
+  }
+
+  useEffect(()=>{
+    !access && navigate('/');
+  }, [access]);
 
 const onClose = (id) => {
   setCharacters(
@@ -90,8 +89,9 @@ const emptyList = (event)=>{
         <Route exact path="/home" element={ <Cards characters={characters} onClose={onClose}/>} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/" element={<Form login={login}/>}/>
-        <Route exact path="/detail/:detailId" element={<Detail />} />
+        <Route exact path="/detail/:detailId" element={<Detail/>} />
         <Route exact path="favorites" element={<Favorites/>} />
+        <Route path="/location" element={<Locations/>} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
         <div>

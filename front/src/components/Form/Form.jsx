@@ -28,28 +28,31 @@ export default function Form({login}){
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor='username'>Username: </label>
+            <form onSubmit={handleSubmit} className={style.container}>
+                <h1 htmlFor='username'>Email </h1>
                 <input 
                 type= 'text' 
                 name= 'username' 
                 placeholder= 'Username' 
                 onChange= {handleInputChange}
                 onKeyDown= {handleKeyDown}
+                className={style.userName}
                 value = {userData.username}
                 ></input>
 
                 <p style= {{color: 'red'}}>{errors.username}</p>
 
-                <label htmlFor='password'>Password: </label>
+                <h1 htmlFor='password'>Password </h1>
                 <input 
                 type= 'password' 
                 name= 'password' 
                 placeholder= '********' 
                 onChange= {handleInputChange}
+                className={style.password}
                 value = {userData.password}
                 ></input>
                 <p>{errors.password}</p>
+                <br/>
                 <button type="submit" className= {style.btn}>Log In</button>
             </form>
         </div>

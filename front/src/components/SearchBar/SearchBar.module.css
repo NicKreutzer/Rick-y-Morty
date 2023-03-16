@@ -3,17 +3,18 @@
    margin: auto;
    width: 250px;
    height: 37px;
+   justify-content: space-around;
 }
 .searchBar input{
    border-radius: 20px;
-   height: 37px;
+   height: 30px;
    width: 300px;
    margin-right: 5px;
    font-size: larger;
 }
 .searchBar button {
    border-radius: 20px;
-   height: 37px;
+   height: 30px;
    background-color: chartreuse;
    color: black;
    font-size: 13px;
@@ -26,4 +27,5 @@
 .searchBar button:hover {
    background-color: #16b600;
    color: white;
+   box-shadow: 2px 2px 3px 3px #02cbfd;
 }

@@ -30,18 +30,22 @@ export default function Detail (){
     // }, [detailId]);
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+        // fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+        // fetch(`${URL_BASE}/character/${detailId}?key=${API_KEY}`)
+        fetch(`http://localhost:3001/detail/${detailId}`)
             .then((response) => response.json())
             .then((char) => {
+
                 console.log(char);
+                
             if (char.name) {
                 setCharacter(char);
             } else {
-                window.alert("No hay personajes con ese ID");
+                window.alert("No characters with this ID");
             }
         })
         .catch((err) => {
-            window.alert("No hay personajes con ese ID");
+            window.alert("No characters with this ID");
         });
         return setCharacter({});
     }, [detailId]);
@@ -63,8 +67,11 @@ export default function Detail (){
                     <h2 className={style.species}> {character.species}</h2>
                     <h2 className={style.gender}> {character.gender}</h2>
                     {character.type && (<h2 className={style.type}> {character.type}</h2>)}
-                    {character.origin && (<h2 className={style.origin}> {character.origin.name}</h2>)}
-                    {character.location && (<h2 className={style.location}> {character.location.name}</h2>)}
+                    {character.status && (<h2 className={style.status}> {character.status}</h2>)}
+                    {character.origin && (<h2 className={style.origin}> {character.origin}</h2>)}
+                    {character.location && (<h2 className={style.location}> {character.location}</h2>)}
+                    <div>
+                    </div>
                 </div>
             </div>
         </div>

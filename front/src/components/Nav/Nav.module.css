@@ -4,7 +4,7 @@
 }
 .container button{
     border-radius: 20px;
-    height: 37px;
+    height: 30px;
     margin: 5px;
     background-color: chartreuse;
     color: black;
@@ -15,19 +15,32 @@
     font-family: cursive;
     font-weight: bolder;
 }
+
+.btnLoc:hover{
+    background-color: #16b600;
+    color: white;
+    box-shadow: 2px 2px 3px 3px #1302fd;
+    border: 1px;
+    border-radius: 20px;
+}
+
 .btnHome:hover{
     background-color: #16b600;
     color: white;
+    box-shadow: 2px 2px 3px 3px #1302fd;
 }
 .btnFav:hover{
     background-color: #16b600;
     color: white;
+    box-shadow: 2px 2px 3px 3px #fd02a9;
 }
 .btnAbt:hover{
     background-color: #16b600;
     color: white;
+    box-shadow: 2px 2px 3px 3px #02fd2c;
 }
 .btnLO:hover{
-    background-color: #eb1f04;
-    color: white;
+    background-color: white;
+    color: red;
+    box-shadow: 2px 2px 3px 3px red;
 }
