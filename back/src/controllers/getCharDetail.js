@@ -1,24 +1,25 @@
 
 const axios = require("axios");
-const URL = "https://rickandmortyapi.com/api/character/";
+const URL_BASE = "https://be-a-rym.up.railway.app/api";
+const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
 
 const getCharDetail = async (req, res) => {
   const {detailId} = req.params;
   console.log(detailId)
-  id = toString(detailId)
+  //id = toString(detailId)
 
-  // axios
-  //   .get(`${URL}${params.id}`)
-  //   .then(({ data }) => {
-  //     const obj = filterData(data);
-  //     res.status(200).json({ ...obj, status: data.status, origin: data.origin });
-  //   })
-  //   .catch((err) => {
-  //     res.status(500).json({ message: err });
-  //   });
+/*  axios
+    .get(`${URL}${params.id}`)
+    .then(({ data }) => {
+      const obj = filterData(data);
+      res.status(200).json({ ...obj, status: data.status, origin: data.origin });
+    })
+    .catch((err) => {
+      res.status(500).json({ message: err });
+    }); */
 
   try {
-    const { data } = await axios.get(`https://rickandmortyapi.com/api/character/${id}`);
+    const { data } = await axios.get(`${URL_BASE}/character/${detailId}?key=${API_KEY}`);
     const obj = filterData(data);
     res.status(200).json(obj);
   } catch (error) {

@@ -13,7 +13,6 @@ const corsOptions = {
     optionSuccessStatus: 200,
 };
 server.use(cors(corsOptions)); // Use this after the variable declaration
-// ---
 
 const {router} = require("./index.js");
 
