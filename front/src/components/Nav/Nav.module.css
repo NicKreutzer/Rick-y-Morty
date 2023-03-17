@@ -13,7 +13,7 @@
     border-radius: 20px;
     height: 30px;
     margin: 5px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     color: black;
     padding: 0 10px 0 10px;
     font-size: 13px;
@@ -26,6 +26,7 @@
 
 .btnLoc{
     display: flex;
+    background-color: #0266fd;
 }
 
 .btnLoc:hover{
@@ -39,6 +40,7 @@
 .btnHome{
     width: fit-content;
     border-radius: 500px;
+    background-color: chartreuse;
 }
 
 .btnHome:hover{
@@ -46,16 +48,31 @@
     color: white;
     box-shadow: 2px 2px 3px 3px #1302fd;
 }
+
+.btnFav{
+    background-color: chartreuse;
+}
+
 .btnFav:hover{
     background-color: #16b600;
     color: white;
     box-shadow: 2px 2px 3px 3px #fd02a9;
 }
+
+.btnAbt{
+    background-color: chartreuse;
+}
+
 .btnAbt:hover{
     background-color: #16b600;
     color: white;
     box-shadow: 2px 2px 3px 3px #02fd2c;
 }
+
+.btnLO{
+    background-color: chartreuse;
+}
+
 .btnLO:hover{
     background-color: white;
     color: red;
