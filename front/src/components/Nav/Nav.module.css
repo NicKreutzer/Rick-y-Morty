@@ -1,7 +1,14 @@
 .container{
     display: flex;
     justify-content: space-around;
+    background-image: url('../../components/Back.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
 }
+
 .container button{
     border-radius: 20px;
     height: 30px;
@@ -14,6 +21,11 @@
     cursor: pointer;
     font-family: cursive;
     font-weight: bolder;
+    width: fit-content;
+}
+
+.btnLoc{
+    display: flex;
 }
 
 .btnLoc:hover{
@@ -22,6 +34,11 @@
     box-shadow: 2px 2px 3px 3px #1302fd;
     border: 1px;
     border-radius: 20px;
+}
+
+.btnHome{
+    width: fit-content;
+    border-radius: 500px;
 }
 
 .btnHome:hover{

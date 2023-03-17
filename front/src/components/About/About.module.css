@@ -20,14 +20,14 @@
     width: fit-content;
     height: fit-content;
     border-radius: 300px;
-    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
+    text-shadow: -1px -1px 1px rgb(57, 250, 31), 1px 1px 1px rgb(57, 250, 31), -1px 1px 1px rgb(57, 250, 31), 1px -1px 1px rgb(57, 250, 31);
 }
 .name{
     color: black;
     margin: 0;
     font-size: 30px;
     text-decoration: underline;
-    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
+    text-shadow: -1px -1px 1px rgb(57, 250, 31), 1px 1px 1px rgb(57, 250, 31), -1px 1px 1px rgb(57, 250, 31), 1px -1px 1px rgb(57, 250, 31);
 }
 .img{
     width: 150px;
@@ -35,7 +35,7 @@
 }
 .contDescription{
     /* background-color: aliceblue; */
-    text-shadow: -2px -2px 1px rgb(57, 250, 31), 2px 2px 1px rgb(57, 250, 31), -2px 2px 1px rgb(57, 250, 31), 2px -2px 1px rgb(57, 250, 31);
+    text-shadow: -1px -1px 1px rgb(57, 250, 31), 1px 1px 1px rgb(57, 250, 31), -1px 1px 1px rgb(57, 250, 31), 1px -1px 1px rgb(57, 250, 31);
     color: aliceblue;
     width: fit-content;
     height: fit-content;

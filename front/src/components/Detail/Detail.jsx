@@ -1,7 +1,8 @@
 
-import { Link, useParams } from "react-router-dom"
-import { useState, useEffect } from "react"
-import style from './Detail.module.css'
+import { Link, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import style from './Detail.module.css';
+import atras from '../../components/atras.png'
 
 export default function Detail (){
 
@@ -54,7 +55,7 @@ export default function Detail (){
         <div>
             {/* <button as={Link} to= "/">Back</button> */}
             <Link to="/home">
-            <button className={style.btn}>«</button>
+            <button className={style.btn}><img src= {atras} alt= "Home" width={35}/></button>
             </Link>
             {/* <h1>Detail</h1> */}
             <h1 className={style.name}>{character.name}</h1>

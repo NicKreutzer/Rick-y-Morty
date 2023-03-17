@@ -1,6 +1,7 @@
 import React from 'react';
 import { validate } from '../Validation';
-import style from './Form.module.css'
+import style from './Form.module.css';
+import RyMForm from '../../components/RyMForm.png'
 
 export default function Form({login}){
     const [userData, setUserData] = React.useState({
@@ -28,8 +29,9 @@ export default function Form({login}){
 
     return(
         <div>
+            <img src= {RyMForm} alt= "Home" width={500}/>
             <form onSubmit={handleSubmit} className={style.container}>
-                <h1 htmlFor='username'>Email </h1>
+                <h2 htmlFor='username'>Email: </h2>
                 <input 
                 type= 'text' 
                 name= 'username' 
@@ -42,7 +44,7 @@ export default function Form({login}){
 
                 <p style= {{color: 'red'}}>{errors.username}</p>
 
-                <h1 htmlFor='password'>Password </h1>
+                <h2 htmlFor='password'>Password: </h2>
                 <input 
                 type= 'password' 
                 name= 'password' 
@@ -52,7 +54,6 @@ export default function Form({login}){
                 value = {userData.password}
                 ></input>
                 <p>{errors.password}</p>
-                <br/>
                 <button type="submit" className= {style.btn}>Log In</button>
             </form>
         </div>
