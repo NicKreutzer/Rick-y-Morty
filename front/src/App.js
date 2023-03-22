@@ -21,8 +21,8 @@ function App () {
   const navigate = useNavigate();
   const location = useLocation();
   const [access, setAccess] = useState(false);
-  const username = "nicolaskreutzer@hotmail.com.ar";
-  const password = "hola123";
+  //const username = "nicolaskreutzer@hotmail.com.ar";
+  //const password = "hola123";
 
     // const URL_BASE = "https://be-a-rym.up.railway.app/api";
   // const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
@@ -60,7 +60,7 @@ function App () {
   }
 
   function login (userData){
-    if(userData.username ===username && userData.ppassword === password)
+    //if(userData.username ===username && userData.ppassword === password)
     setAccess(true);
     navigate('/home');
   }
