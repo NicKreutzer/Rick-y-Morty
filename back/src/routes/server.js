@@ -1,9 +1,8 @@
 
-const express = require("express");
-const server = express();
 const PORT = 3001; 
-const cors = require("cors");
-const {router} = require("./index.js");
+const { sequelize } = require("../DB_connection.js");
+const saveApiData = require("../controllers/saveApiData");
+const app = require("../app.js");
 
 // Configuración con problema de CORS
 // npm install cors --save
@@ -13,33 +12,9 @@ const corsOptions = {
     credentials: true, // access-control-allow-credentials: true
     optionSuccessStatus: 200,
 };
-server.use(cors(corsOptions)); // Use this after the variable declaration
 
-
-server.use(express.json());
-
-server.use("/", router);
-
-server.listen(PORT, () => {
+app.listen(PORT, async () => {
+    await sequelize.sync({force: true});
+    await saveApiData();
     console.log("Server raised in port " + PORT);
 });
-
-
-// const http = require ('http');
-// const getCharById = require('../controllers/getCharById')
-// const getCharDetail = require ('../controllers/getCharDetail')
-
-// http.createServer((req, res) =>{
-//     res.setHeader('Access-Control-Allow-Origin', '*')
-
-//     let id = req.url.split('/').at(-1);
-    
-//     if(req.url.includes('onsearch')){
-//         getCharById(res, id)
-//     }
-//     if(req.url.includes('detail')){
-//         getCharDetail(res, id)
-//     }
-
-// }).listen(3001, 'localhost');
-

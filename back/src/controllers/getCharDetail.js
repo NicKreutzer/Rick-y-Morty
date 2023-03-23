@@ -6,17 +6,6 @@ const API_KEY = "b13ef727c3c3.981b0d40d54e6c8b2134";
 const getCharDetail = async (req, res) => {
   const {detailId} = req.params;
   console.log(detailId)
-  //id = toString(detailId)
-
-/*  axios
-    .get(`${URL}${params.id}`)
-    .then(({ data }) => {
-      const obj = filterData(data);
-      res.status(200).json({ ...obj, status: data.status, origin: data.origin });
-    })
-    .catch((err) => {
-      res.status(500).json({ message: err });
-    }); */
 
   try {
     const { data } = await axios.get(`${URL_BASE}/character/${detailId}?key=${API_KEY}`);
@@ -42,7 +31,6 @@ function filterData(data) {
 
 module.exports = { getCharDetail };
 
-// const url = "https://rickandmortyapi.com/api/character/";
 
 // function getCharDetail(req, res) {
 //     const charId = req.params.id;

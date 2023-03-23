@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const router = require("./routes/index.js");
+const { router } = require("./routes/index.js");
 
 // Configuración con problema de CORS
 const corsOptions = {
