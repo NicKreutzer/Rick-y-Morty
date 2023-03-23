@@ -3,10 +3,9 @@ const app = express();
 const cors = require("cors");
 const { router } = require("./routes/index.js");
 
-// Configuración con problema de CORS
 const corsOptions = {
   origin: "*",
-  credentials: true, // access-control-allow-credentials: true
+  credentials: true, 
   optionSuccessStatus: 200,
 };
 
