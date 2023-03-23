@@ -40,7 +40,7 @@
     color: white;
 }
 
-.name::before{
+/* .name::before{
     content: "Name: ";
     color: rgb(13, 1, 83);
 }
@@ -53,4 +53,4 @@
 .dimension::before{
     content: "Dimension: ";
     color: rgb(13, 1, 83);
-}
+} */

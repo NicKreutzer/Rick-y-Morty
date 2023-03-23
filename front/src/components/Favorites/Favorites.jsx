@@ -45,10 +45,6 @@ const Favorites = () => {
                             <img className={style.img} src={character.image} alt={character.name}/>
                             </Link>
                             </div>
-                            {/* <h2 className={style.species}>{character.species}</h2>
-                            <h4 className={style.gender}>{character.gender}</h4>
-                            <h5 className={style.origin}>Origin: {character.origin.name}</h5>
-                            <h6 className={style.location}>Location: {character.location.name}</h6> */}
                         </div>
                     )
                 })

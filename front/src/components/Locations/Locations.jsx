@@ -23,7 +23,6 @@ export default function Locations() {
         }
     };
 
-    // Verifica si el ID de la URL está definido y actualiza el estado "id" en consecuencia
     useEffect(() => {
         if (paramId) {
             setId(paramId);
@@ -47,11 +46,11 @@ export default function Locations() {
             <br/>
             {location && (
                 <div>
-                    <h2 className={style.name}> {location.name}</h2>
+                    <h2 className={style.name}>{location.name}</h2>
                     <br/>
-                    <h2 className={style.type}> {location.type}</h2>
+                    <h2 className={style.type}>{location.type}</h2>
                     <br/>
-                    <h2 className={style.dimension}> {location.dimension}</h2>
+                    <h2 className={style.dimension}>{location.dimension}</h2>
                 </div>
             )}
         </div>

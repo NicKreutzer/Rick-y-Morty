@@ -53,11 +53,9 @@ export default function Detail (){
 
     return(
         <div>
-            {/* <button as={Link} to= "/">Back</button> */}
             <Link to="/home">
             <button className={style.btn}><img src= {atras} alt= "Home" width={35}/></button>
             </Link>
-            {/* <h1>Detail</h1> */}
             <h1 className={style.name}>{character.name}</h1>
 
             <div className={style.container}>

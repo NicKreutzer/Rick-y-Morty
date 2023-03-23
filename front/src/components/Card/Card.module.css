@@ -12,7 +12,6 @@
    height: fit-content;
    display:inline;
    justify-content: space-between; 
-    /* flex-direction: row-reverse; */
 }
 .header {
    display: flex;

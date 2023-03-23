@@ -35,5 +35,3 @@ const generateRandomId = () => {
       </div>
    );
 }
-
-// export default SearchBar;

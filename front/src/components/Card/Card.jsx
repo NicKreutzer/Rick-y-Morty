@@ -49,11 +49,6 @@ export default function Card({id, name, species, gender, image, origin, location
             </Link>
             </div>
             <h2 className={style.species}>{species}</h2>
-            {/* {character.type && <h3>{Type:{type}</h3> }*/}
-            {/* <h4 className={style.gender}>{gender}</h4> */}
-            {/* <h5 className={style.origin}>Origin: {origin.name}</h5>
-            <h6 className={style.location}>Location: {location.name}</h6> */}
-            {/* <button className={style.btn} onClick={click}><strong>→</strong></button> */}
          </div>
    );
 }
