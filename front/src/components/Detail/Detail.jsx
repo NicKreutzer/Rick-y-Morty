@@ -2,7 +2,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import style from './Detail.module.css';
-import atras from '../../components/atras.png'
+import atras from '../../components/atras.png';
 
 export default function Detail (){
 
@@ -53,7 +53,7 @@ export default function Detail (){
 
     return(
         <div>
-            <Link to="/home">
+            <Link to={"/home"}>
             <button className={style.btn}><img src= {atras} alt= "Home" width={35}/></button>
             </Link>
             <h1 className={style.name}>{character.name}</h1>

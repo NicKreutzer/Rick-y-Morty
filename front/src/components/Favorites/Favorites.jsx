@@ -34,10 +34,12 @@ const Favorites = () => {
                 <option value="Genderless">Genderless</option>
                 </select>
             </div>
+            <br/>
+            <div className={style.container}>
             {
                 myFavorites.map((character)=>{
                     return(
-                        <div>
+                        <div className= {style.favs}>
                             <button className={style.removeBtn} onClick={() => handlerFavorites(character.id)}>❤️</button>
                             <h1 className={style.name}><strong>{character.name}</strong></h1>
                             <div>
@@ -49,6 +51,7 @@ const Favorites = () => {
                     )
                 })
             }
+            </div>
         </div>
     )
 }
